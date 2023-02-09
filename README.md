@@ -1,7 +1,7 @@
-<h1 align="center"> Habits </h1>
+<h1 align="center"> ToDo List (ReactJS) </h1>
 
 <p align="center">
-NLW é um evento exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnologias WEB. <br/>
+Site ToDo List para melhorar Rotina do seu dia!. <br/>
 </p>
 
 <p align="center">
@@ -18,7 +18,7 @@ NLW é um evento exclusivo e gratuito, promovido pela Rocketseat para ensino de 
 <br>
 
 <p align="center">
-  <img alt="projeto Habits" src=".github/preview.jpg" width="100%">
+  <img alt="projeto Habits" src=".github/todolistimage" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -32,7 +32,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-O Habits é um app para ajudar a rastrear os hábitos.
+O Habits é um app para ajudar a manter rotina.
 
 - [Visite o projeto online](https://fernandoalbuquerque3.github.io/nlw-habits/)
 
@@ -46,4 +46,4 @@ Esse projeto está sob a licença MIT.
 
 ---
 
-Feito com ♥ by Rocketseat :wave: [Participe da nossa comunidade!](https://discord.gg/rocketseat)
+Feito com ♥ by Fernando Albuquerque :wave:
