@@ -1,37 +1,35 @@
-import React, { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
+import React, { useEffect, useState } from "react"
+import { v4 as uuidv4 } from "uuid"
+import axios, { Axios } from "axios"
+import Tasks from "./components/Tasks"
+import "./App.css"
 
-import Tasks from "./components/Tasks";
-import "./App.css";
-
-import AddTask from "./components/addTask";
-import TaskDetails from "./components/TaskDetails";
-import Header from "./components/Header";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import AddTask from "./components/addTask"
+import TaskDetails from "./components/TaskDetails"
+import Header from "./components/Header"
+import { BrowserRouter as Router, Route } from "react-router-dom"
 
 const App = () => {
-  const [tasks, setTask] = useState([
-    {
-      id: "1",
-      title: "Estudar Progamaçao",
-      completed: false,
-    },
-    {
-      id: "2",
-      title: "Ler livros",
-      completed: true,
-    },
-  ]);
+  const [tasks, setTasks] = useState([])
+
+  useEffect(() => {
+    const fetchTasks = async () => {
+      const { data } = await axios.get(
+        "https://jsonplaceholder.cypress.io/todos?_limit=10"
+      )
+      setTasks(data)
+    }
+    fetchTasks()
+  }, [])
 
   const handleTaskClick = (taskId) => {
     const newTasks = tasks.map((task) => {
-      if (task.id === taskId) return { ...task, completed: !task.completed };
+      if (task.id === taskId) return { ...task, completed: !task.completed }
 
-      return task;
-    });
-
-    setTask(newTasks);
-  };
+      return task
+    })
+    setTasks(newTasks)
+  }
 
   const handleTaskAddition = (taskTitle) => {
     const newTasks = [
@@ -41,15 +39,14 @@ const App = () => {
         id: uuidv4(),
         completed: false,
       },
-    ];
-
-    setTask(newTasks);
-  };
+    ]
+    setTasks(newTasks)
+  }
 
   const handleTaskDeletion = (taskId) => {
-    const newTasks = tasks.filter((task) => task.id !== taskId);
-    setTask(newTasks);
-  };
+    const newTasks = tasks.filter((task) => task.id !== taskId)
+    setTasks(newTasks)
+  }
 
   return (
     <Router>
@@ -70,10 +67,9 @@ const App = () => {
           )}
         />
         <Route path="/:taskTitle" exact component={TaskDetails} />
-
       </div>
     </Router>
-  );
-};
+  )
+}
 
-export default App;
+export default App

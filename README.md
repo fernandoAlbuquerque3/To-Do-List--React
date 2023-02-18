@@ -18,7 +18,7 @@ Site ToDo List para melhorar Rotina do seu dia!. <br/>
 <br>
 
 <p align="center">
-  <img alt="projeto Habits" src=".github/todolistimage" width="100%">
+  <img alt="projeto To do List" src=".github/todolistimage" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -27,12 +27,13 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - HTML e CSS
 - JavaScript
+- ReactJS
 - Git e Github
 - Figma
 
 ## 💻 Projeto
 
-O Habits é um app para ajudar a manter rotina.
+O To do list é um app para ajudar a manter rotina.
 
 - [Visite o projeto online](https://fernandoalbuquerque3.github.io/nlw-habits/)
 
